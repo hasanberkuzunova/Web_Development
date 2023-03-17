@@ -1,0 +1,83 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Admin.master.cs" Inherits="Admin" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="User.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style4 {
+            font-size: large;
+            float: left;
+            width: 200px;
+            height: auto;
+        }
+        .auto-style7 {
+            margin-left: 0px;
+        }
+        .auto-style8 {
+            width: 700px;
+            height: 20px;
+        }
+        .auto-style9 {
+            width: 100%;
+        }
+        .auto-style10 {
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div style="height: 150px; width: 700px; margin-left:300px; background-color:#5e9fee"><asp:Image ID="Image1" runat="server" CssClass="auto-style7" Height="150px" ImageUrl="~/BannerPhoto/ebale-nutanix-cvm-ahv-login-banner-1-1.jpg" Width="700px" />
+        </div>
+        
+         <div style="margin-left:300px;" class="auto-style8"> </div>
+
+         <div style="margin-left:300px;width:700px;height:300px">
+             <div style="margin-left:0px;  background-color:#5e9fee" class="auto-style4"> 
+                 <table class="auto-style9">
+                     <tr>
+                         <td><strong>MENU</strong></td>
+                     </tr>
+                     <tr>
+                         <td>&nbsp;</td>
+                     </tr>
+                     <tr>
+                         <td style="border: thin solid #FFFFFF"><a href="Categories.aspx">Categories</a></td>
+                     </tr>
+                     <tr>
+                         <td style="border: thin solid #FFFFFF"><a href="AdminFood.aspx">Foods</a></td>
+                     </tr>
+                     <tr>
+                         <td style="border: thin solid #FFFFFF"><a href="AdminComment.aspx">Comments</a></td>
+                     </tr>
+                     <tr>
+                         <td style="border: thin solid #FFFFFF"><a href="AdminMessages.aspx">Messages</a></td>
+                     </tr>
+                     <tr>
+                         <td class="auto-style10" style="border: thin solid #FFFFFF"><a href="AdminFoodOfTheDay.aspx">Meal Of The Day</a></td>
+                     </tr>
+                     <tr>
+                         <td style="border: thin solid #FFFFFF"><a href="AdminSuggestMeal.aspx">Food Suggestions</a></td>
+                     </tr>
+                     <tr>
+                         <td style="border: thin solid #FFFFFF"><a href="AdminAboutUs.aspx"> About Us</a></td>
+                     </tr>
+                 </table>
+                 <strong><br />
+                 </strong> 
+             </div>
+             <div style="margin-left:50px;float:left; width:450px; height:auto; background-color:#5e9fee">
+                 <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder> 
+
+             </div>
+         </div>
+    </form>
+</body>
+</html>

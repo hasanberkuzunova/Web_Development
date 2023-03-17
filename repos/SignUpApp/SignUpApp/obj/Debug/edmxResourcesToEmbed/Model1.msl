@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DBSignUpModelStoreContainer" CdmEntityContainer="DBSignUpEntities">
+    <FunctionImportMapping FunctionImportName="Submit" FunctionName="DBSignUpModel.Store.Submit" />
+    <FunctionImportMapping FunctionImportName="Submit_v" FunctionName="DBSignUpModel.Store.Submit_v" />
+    <FunctionImportMapping FunctionImportName="sbmt" FunctionName="DBSignUpModel.Store.sbmt" />
+  </EntityContainerMapping>
+</Mapping>

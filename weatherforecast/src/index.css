@@ -1,0 +1,126 @@
+:root{
+    --renk-baslik:#ffe978;
+    --renk-search-arka:#eaeaea;
+    --renk-default:#ffffff;
+    --renk-result-background:#474747;
+    --baslik-yazi-boyutu:48px;
+    --search-yazi-boyutu:22px;
+    --city-yazi-boyutu:64px;
+    --derece-yazi-boyutu:96px;
+    --statu-yazi-boyutu:36px;
+    
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    overflow: hidden;
+}
+
+.background {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: -10;
+    left: 0;
+    top: 0;
+    background-color: rgba(0,0, 0, 1);
+}
+
+.background .backgroundimage {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    z-index: -5;
+    right: 0;
+    bottom: 0;
+    background-color:  rgba(0,0,0,0);
+}
+
+.background .overlay {
+    position: absolute;
+    z-index: -3;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover; 
+    background-position: center center; 
+    background-color: rgba(0,0,0,0.5);
+}
+
+#baslik {
+    margin-top: 40px;
+    text-align: center;
+    color: var(--renk-baslik);
+    font-size: var(--baslik-yazi-boyutu);
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.search .search-input{
+    width: 80%;
+    height: 30px;
+    text-align: center;
+    border-radius: 15px;
+    padding: 20px;
+    border: none;
+    font-size: var(--baslik-yazi-boyutu);
+    background-color: var(--renk-search-arka);
+}
+
+.result{
+position: relative;
+margin-top: 100px;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+
+.result .city{
+    color: var(--renk-default);
+    font-size: var(--city-yazi-boyutu);
+    text-align: center;
+}
+
+.result .detail{
+    margin-top: 60px;
+    width: 100vw;
+    height: 250px;
+    background-color: var(--renk-result-background);
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.result .detail .temperature{
+    color: var(--renk-default);
+    font-size: var(--derece-yazi-boyutu);
+    font-weight: bold;
+}
+
+.result .detail .status{
+    color: var(--renk-default);
+    font-size: var(--statu-yazi-boyutu);
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (min-width: 950px){
+    .uygulama{
+            width: 100%;
+            height: 100vh;
+            margin: 0 auto;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(0,0, 0, 0);
+        }
+       
+}
+
+

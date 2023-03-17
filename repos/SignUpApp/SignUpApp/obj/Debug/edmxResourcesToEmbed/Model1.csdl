@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBSignUpModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="TableSignUp">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="DBSignUpEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="TableSignUp" EntityType="Self.TableSignUp" />
+    <FunctionImport Name="welcome" ReturnType="Collection(DBSignUpModel.welcome_Result)" />
+    <FunctionImport Name="Submit">
+      <Parameter Name="ID" Mode="In" Type="String" />
+      <Parameter Name="Name" Mode="In" Type="String" />
+      <Parameter Name="Email" Mode="In" Type="String" />
+      <Parameter Name="Status" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="Submit_v">
+      <Parameter Name="ID" Mode="In" Type="Guid" />
+      <Parameter Name="Name" Mode="In" Type="String" />
+      <Parameter Name="Email" Mode="In" Type="String" />
+      <Parameter Name="Status" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sbmt">
+      <Parameter Name="ID" Mode="In" Type="Guid" />
+      <Parameter Name="Name" Mode="In" Type="String" />
+      <Parameter Name="Email" Mode="In" Type="String" />
+      <Parameter Name="Status" Mode="In" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="welcome_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Password" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Email" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="Status" Nullable="false" />
+  </ComplexType>
+</Schema>
